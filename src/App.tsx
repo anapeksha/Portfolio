@@ -2,7 +2,8 @@ import ArrowUpwardRoundedIcon from "@mui/icons-material/ArrowUpwardRounded";
 import ScrollToTop from "react-scroll-to-top";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
-import Explore from "./pages/Explore";
+import Contact from "./pages/Contact";
+import Experience from "./pages/Experience";
 import Home from "./pages/Home";
 import Work from "./pages/Work";
 
@@ -12,15 +13,16 @@ const App: React.FC = () => {
 			<Navbar />
 			<Home />
 			<About />
-			<Explore />
 			<Work />
+			<Experience />
+			<Contact />
 			<ScrollToTop
 				smooth
 				component={<ArrowUpwardRoundedIcon />}
-				color="#161d22"
+				color="#0f1317"
 			/>
 		</div>
 	);
-}
+};
 
 export default App;
