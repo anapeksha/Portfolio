@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ArrowUpwardRoundedIcon from "@mui/icons-material/ArrowUpwardRounded";
+import ScrollToTop from "react-scroll-to-top";
+import Navbar from "./components/Navbar";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Experience from "./pages/Experience";
+import Home from "./pages/Home";
+import Work from "./pages/Work";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+	return (
+		<div>
+			<Navbar />
+			<Home />
+			<About />
+			<Work />
+			<Experience />
+			<Contact />
+			<ScrollToTop
+				smooth
+				component={<ArrowUpwardRoundedIcon />}
+				color="#0f1317"
+			/>
+		</div>
+	);
+};
 
 export default App;
