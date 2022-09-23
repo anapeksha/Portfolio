@@ -1,9 +1,14 @@
+import { Box, Button } from "@mui/material";
+import { useState } from "react";
 import wave from "../assets/wave.gif";
+import Popover from "../components/Popover";
 import CustomTypography from "../styles/CustomTypography.style";
 
 const Home: React.FC = () => {
+	const [modalOpen, setModalOpen] = useState<boolean>(false);
+
 	return (
-		<div id="#">
+		<Box id="#" sx={{ ml: 4 }}>
 			<CustomTypography
 				variant="h1"
 				className="animate__animated animate__fadeInUp animate__fast"
@@ -21,10 +26,7 @@ const Home: React.FC = () => {
 				variant="h4"
 				className="animate__animated animate__fadeInUp animate__slow"
 				style={{
-					backgroundImage:
-						"linear-gradient(90deg, hsla(206, 70%, 50%, 1) 0%, hsla(196, 46%, 60%, 1) 6%, hsla(332, 83%, 45%, 1) 12%)",
-					backgroundClip: "text",
-					color: "transparent",
+					color: "#62ffda",
 				}}
 			>
 				intrigued,
@@ -33,16 +35,38 @@ const Home: React.FC = () => {
 				variant="h4"
 				className="animate__animated animate__fadeInUp animate__slower"
 				style={{
-					backgroundImage:
-						"linear-gradient(90deg, rgba(32,98,170,0.9037815809917717) 15%, rgba(147,37,204,0.8897759787508753) 45%)",
-					backgroundClip: "text",
-					color: "transparent",
+					color: "#62ffda",
 				}}
 				gutterBottom
 			>
 				curious and hunting solutions in the tech space.
 			</CustomTypography>
-		</div>
+			<CustomTypography variant="h6" sx={{ mb: 4 }}>
+				Working as a Software Engineer at{" "}
+				<a
+					style={{ color: "#62ffda", textDecoration: "none" }}
+					href="https://www.mindtree.com"
+				>
+					Mindtree Ltd.
+				</a>
+			</CustomTypography>
+			<Box sx={{ mb: 4 }}>
+				<Button
+					variant="outlined"
+					size="large"
+					style={{
+						borderColor: "#62ffda",
+						color: "#62ffda",
+					}}
+					onClick={() => {
+						setModalOpen(true);
+					}}
+				>
+					View CV
+				</Button>
+			</Box>
+			<Popover open={modalOpen} setOpen={setModalOpen} />
+		</Box>
 	);
 };
 
