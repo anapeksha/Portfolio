@@ -5,10 +5,10 @@ import Container from "@mui/material/Container";
 import Toolbar from "@mui/material/Toolbar";
 
 const pages: Array<{ name: string; url: string }> = [
-	{ name: "Explore", url: "#explore" },
+	{ name: "Experience", url: "#experience" },
 	{ name: "Work", url: "#work" },
 	{ name: "About", url: "#about" },
-	{ name: "Contact Me", url: "#contact" },
+	{ name: "Contact", url: "#contact" },
 ];
 
 const Navbar: React.FC = () => {
