@@ -13,8 +13,8 @@ const App: React.FC = () => {
 			<Navbar />
 			<Home />
 			<About />
-			<Work />
 			<Experience />
+			<Work />
 			<Contact />
 			<ScrollToTop
 				smooth
