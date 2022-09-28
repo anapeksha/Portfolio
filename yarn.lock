@@ -9737,6 +9737,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pdfobject@npm:^2.1.1":
+  version: 2.2.8
+  resolution: "pdfobject@npm:2.2.8"
+  checksum: e7d5abb322afe9b8b99c64551ac7f921a4cfeb5fdd582afff080e24ccf59d492e2edb787199ca780c1e25b0624ebe2b48183015500b45f133299ad92adf49048
+  languageName: node
+  linkType: hard
+
 "performance-now@npm:^2.1.0":
   version: 2.1.0
   resolution: "performance-now@npm:2.1.0"
@@ -9845,6 +9852,8 @@ __metadata:
     gh-pages: ^4.0.0
     react: ^18.2.0
     react-dom: ^18.2.0
+    react-event-timeline: ^1.6.3
+    react-pdfobject: ^1.2.0
     react-scripts: 5.0.1
     react-scroll-to-top: ^3.0.0
     typescript: ^4.4.2
@@ -10799,7 +10808,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.6.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.6.0, prop-types@npm:^15.6.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -10973,6 +10982,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-event-timeline@npm:^1.6.3":
+  version: 1.6.3
+  resolution: "react-event-timeline@npm:1.6.3"
+  dependencies:
+    prop-types: ^15.6.0
+  peerDependencies:
+    react: ">= 0.14.0 < 17.0.0-0"
+  checksum: 82ef167ce3f1197371439af2d5c658e6c6b35a0a56469b796f1892cc48db9d5d3e0c3818b49d0d710a8f73ac16e7b0cec36d663e8aea1234ca11369b63b2cc02
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1, react-is@npm:^16.7.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -10991,6 +11011,15 @@ __metadata:
   version: 18.2.0
   resolution: "react-is@npm:18.2.0"
   checksum: e72d0ba81b5922759e4aff17e0252bd29988f9642ed817f56b25a3e217e13eea8a7f2322af99a06edb779da12d5d636e9fda473d620df9a3da0df2a74141d53e
+  languageName: node
+  linkType: hard
+
+"react-pdfobject@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "react-pdfobject@npm:1.2.0"
+  dependencies:
+    pdfobject: ^2.1.1
+  checksum: 4f2f1d2dff7a330b4b0c0007c890dd3252709a3923fa9484fdacd137b1e5405750fd44c401e915a83b7ed24a85ebbd8e33f0c606b6bb089cabcc6bc22ff8f4ed
   languageName: node
   linkType: hard
 
