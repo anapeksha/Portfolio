@@ -6,7 +6,6 @@ const Popover = (props: any) => {
 	const handleClose = () => {
 		props.setOpen(false);
 	};
-	const pdf = require("../assets/resume/resume.pdf");
 	return (
 		<Dialog open={props.open} onClose={handleClose} TransitionComponent={Zoom}>
 			<Box style={{ backgroundColor: "hsl(213deg 72% 12%)" }}>
