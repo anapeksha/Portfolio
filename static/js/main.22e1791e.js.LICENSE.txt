@@ -1,4 +1,13 @@
 /**
+ *  PDFObject v2.2.8
+ *  https://github.com/pipwerks/PDFObject
+ *  @license
+ *  Copyright (c) 2008-2022 Philip Hutchison
+ *  MIT-style license: http://pipwerks.mit-license.org/
+ *  UMD module pattern from https://github.com/umdjs/umd/blob/master/templates/returnExports.js
+ */
+
+/**
  * @license React
  * react-dom.production.min.js
  *
@@ -38,7 +47,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-/** @license MUI v5.10.6
+/** @license MUI v5.10.7
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
