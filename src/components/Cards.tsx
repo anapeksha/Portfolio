@@ -15,6 +15,7 @@ const Cards: React.FC<ICardProps> = (props) => {
 	return (
 		<motion.div
 			whileHover={{ scale: 1.1 }}
+			whileTap={{ scale: 1.1 }}
 			transition={{ type: "spring", stiffness: 400, damping: 10 }}
 		>
 			<Card
@@ -51,7 +52,7 @@ const Cards: React.FC<ICardProps> = (props) => {
 					</Typography>
 				</CardContent>
 				<CardActions>
-					<motion.div whileTap={{ scale: 0.8 }}>
+					<motion.div whileHover={{ scale: 0.8 }}>
 						<IconButton href={props.githubUrl} target="_blank">
 							<GitHubIcon fontSize="small" sx={{ color: "#62ffda" }} />
 						</IconButton>
