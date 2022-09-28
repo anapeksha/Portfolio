@@ -13,7 +13,7 @@ const pages: Array<{ name: string; url: string }> = [
 
 const Navbar: React.FC = () => {
 	return (
-		<AppBar position="sticky" elevation={4} color="transparent">
+		<AppBar position="static" elevation={12} color="transparent">
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
 					<Box sx={{ flexGrow: 1, display: { xs: "flex", md: "flex" } }}>
