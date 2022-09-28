@@ -14,13 +14,12 @@ const BasicGrid: React.FC<IGridProps> = (props) => {
 			<Grid container spacing={2}>
 				{props.data.map((d, i) => {
 					return (
-						<Grid item xs={6} sm={4} md={3}>
+						<Grid item xs={6} sm={4} md={3} key={i}>
 							<Cards
 								title={d.title}
 								description={d.description}
 								githubUrl={d.githubUrl}
 								techs={d.techs}
-								key={i}
 							/>
 						</Grid>
 					);
