@@ -52,11 +52,11 @@ const Home: React.FC = () => {
 			</CustomTypography>
 			<Box sx={{ mb: 4 }}>
 				<Button
-					variant="outlined"
+					variant="contained"
 					size="large"
+					color="secondary"
 					style={{
-						borderColor: "#62ffda",
-						color: "#62ffda",
+						color: "#091c35",
 					}}
 					onClick={() => {
 						setModalOpen(true);
