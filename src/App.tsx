@@ -19,7 +19,11 @@ const App: React.FC = () => {
 			<ScrollToTop
 				smooth
 				component={<ArrowUpwardRoundedIcon />}
-				color="#0f1317"
+				style={{
+					backgroundColor: "#131313",
+					color: "#62ffda",
+					boxShadow: "none",
+				}}
 			/>
 		</div>
 	);
