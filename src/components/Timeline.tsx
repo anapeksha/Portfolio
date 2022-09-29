@@ -14,7 +14,7 @@ const TimeLine: React.FC<ITimelineProps> = (props) => {
 			{props.data.map((d, i) => {
 				return (
 					<TimelineItem key={i}>
-						<TimelineOppositeContent sx={{ m: "auto 0" }} variant="body1">
+						<TimelineOppositeContent sx={{ m: "auto 0" }} variant="h6">
 							{d.company}
 						</TimelineOppositeContent>
 						<TimelineSeparator>
@@ -23,7 +23,7 @@ const TimeLine: React.FC<ITimelineProps> = (props) => {
 							</TimelineDot>
 							<TimelineConnector sx={{ bgcolor: "secondary.main" }} />
 						</TimelineSeparator>
-						<TimelineContent sx={{ m: "auto 0" }} variant="body2">
+						<TimelineContent sx={{ m: "auto 0" }} variant="subtitle2">
 							{d.designation}
 						</TimelineContent>
 					</TimelineItem>
