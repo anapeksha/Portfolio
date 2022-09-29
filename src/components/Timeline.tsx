@@ -1,25 +1,42 @@
-import WorkIcon from "@mui/icons-material/Work";
-import { Timeline, TimelineBlip } from "react-event-timeline";
+import Timeline from "@mui/lab/Timeline";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineDot from "@mui/lab/TimelineDot";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
 
-const TimeLine = () => {
+function TimeLine() {
 	return (
-		<Timeline lineColor="#62ffda">
-			<TimelineBlip
-				title="Software Engineer Trainee@Mindtree"
-				icon={<WorkIcon />}
-				iconColor="#62ffda"
-				style={{
-					fontFamily: "Merriweather, serif",
-				}}
-			></TimelineBlip>
-			<TimelineBlip
-				title="Software Engineer@Mindtree"
-				icon={<WorkIcon />}
-				iconColor="#62ffda"
-				style={{ fontFamily: "Merriweather, serif" }}
-			></TimelineBlip>
+		<Timeline position="alternate">
+			<TimelineItem>
+				<TimelineSeparator>
+					<TimelineDot />
+					<TimelineConnector/>
+				</TimelineSeparator>
+				<TimelineContent>Eat</TimelineContent>
+			</TimelineItem>
+			<TimelineItem>
+				<TimelineSeparator>
+					<TimelineDot />
+					<TimelineConnector />
+				</TimelineSeparator>
+				<TimelineContent>Code</TimelineContent>
+			</TimelineItem>
+			<TimelineItem>
+				<TimelineSeparator>
+					<TimelineDot />
+					<TimelineConnector />
+				</TimelineSeparator>
+				<TimelineContent>Sleep</TimelineContent>
+			</TimelineItem>
+			<TimelineItem>
+				<TimelineSeparator>
+					<TimelineDot />
+				</TimelineSeparator>
+				<TimelineContent>Repeat</TimelineContent>
+			</TimelineItem>
 		</Timeline>
 	);
-};
+}
 
 export default TimeLine;
