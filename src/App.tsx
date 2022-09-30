@@ -33,7 +33,7 @@ const App: React.FC = () => {
 					smooth
 					component={<ArrowUpwardRoundedIcon />}
 					style={{
-						backgroundColor: "#172945",
+						backgroundColor: "#102137",
 						color: "#62ffda",
 						boxShadow: "none",
 					}}
