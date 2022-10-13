@@ -8,21 +8,21 @@ import ContactButton from "./ContactButton";
 
 const ContactBar: React.FC = () => {
 	return (
-		<Stack direction="row" spacing={0.25} sx={{ ml: 4 }}>
+		<Stack direction="row" spacing={2} sx={{ mr: 4 }}>
 			<ContactButton url="https://instagram.com/naaz.xo">
-				<InstagramIcon fontSize="small" style={{ color: "#62ffda" }} />
+				<InstagramIcon fontSize="large" color="secondary" />
 			</ContactButton>
 			<ContactButton url="https://facebook.com/anapeksha.mukherjee">
-				<FacebookIcon fontSize="small" style={{ color: "#62ffda" }} />
+				<FacebookIcon fontSize="large" color="secondary" />
 			</ContactButton>
 			<ContactButton url="https://linkedin.com/in/anapeksha-mukherjee">
-				<LinkedInIcon fontSize="small" style={{ color: "#62ffda" }} />
+				<LinkedInIcon fontSize="large" color="secondary" />
 			</ContactButton>
 			<ContactButton url="hhttps://github.com/anapeksha">
-				<GitHubIcon fontSize="small" style={{ color: "#62ffda" }} />
+				<GitHubIcon fontSize="large" color="secondary" />
 			</ContactButton>
 			<ContactButton url="mailto:anapeksha.mukherjee@gmail.com">
-				<EmailIcon fontSize="small" style={{ color: "#62ffda" }} />
+				<EmailIcon fontSize="large" color="secondary" />
 			</ContactButton>
 		</Stack>
 	);

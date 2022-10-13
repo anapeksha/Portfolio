@@ -1,5 +1,6 @@
 import FolderIcon from "@mui/icons-material/FolderRounded";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkIcon from "@mui/icons-material/Link";
 import {
 	Box,
 	Card,
@@ -54,9 +55,16 @@ const Cards: React.FC<ICardProps> = (props) => {
 				<CardActions>
 					<motion.div whileHover={{ scale: 0.8 }}>
 						<IconButton href={props.githubUrl} target="_blank">
-							<GitHubIcon fontSize="small" sx={{ color: "#62ffda" }} />
+							<GitHubIcon fontSize="small" color="secondary" />
 						</IconButton>
 					</motion.div>
+					{props.url !== "" ? (
+						<motion.div whileHover={{ scale: 0.8 }}>
+							<IconButton href={props.url} target="_blank">
+								<LinkIcon fontSize="small" color="secondary" sx={{ ml: -2 }} />
+							</IconButton>
+						</motion.div>
+					) : null}
 				</CardActions>
 			</Card>
 		</motion.div>
