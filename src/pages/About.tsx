@@ -27,7 +27,13 @@ const About: React.FC = () => {
 				</CustomTypography>
 			</Box>
 			<Box sx={{ display: "flex" }}>
-				<Grid container spacing={2} sx={{ mr: 4 }}>
+				<Grid
+					container
+					justifyContent="space-evenly"
+					alignItems="center"
+					spacing={2}
+					sx={{ mr: 2 }}
+				>
 					{skills.map((skill, i) => {
 						return (
 							<Grid item xs={4} md={3} xl={2} key={i}>
