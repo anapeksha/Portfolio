@@ -19,6 +19,7 @@ const BasicGrid: React.FC<IGridProps> = (props) => {
 								title={d.title}
 								description={d.description}
 								githubUrl={d.githubUrl}
+								url={d.url}
 								techs={d.techs}
 							/>
 						</Grid>
