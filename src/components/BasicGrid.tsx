@@ -11,7 +11,7 @@ const BasicGrid: React.FC<IGridProps> = (props) => {
 				flexGrow: 1,
 			}}
 		>
-			<Grid container spacing={2}>
+			<Grid container spacing={2} justifyContent="center" alignItems="center">
 				{props.data.map((d, i) => {
 					return (
 						<Grid item xs={6} sm={4} md={3} key={i}>
