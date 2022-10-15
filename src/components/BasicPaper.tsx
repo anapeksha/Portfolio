@@ -4,12 +4,12 @@ import IPaperProps from "../interfaces/IPaperProps";
 
 const BasicPaper: React.FC<IPaperProps> = (props) => {
 	return (
-		<motion.div
-			whileHover={{ scale: 2 }}
-			whileTap={{ scale: 2 }}
-			transition={{ type: "spring", stiffness: 400, damping: 10 }}
-		>
-			<Box sx={{ display: "flex", flexWrap: "wrap" }}>
+		<Box sx={{ display: "flex", flexWrap: "wrap" }}>
+			<motion.div
+				whileHover={{ scale: 1.4 }}
+				whileTap={{ scale: 1.4 }}
+				transition={{ type: "spring", stiffness: 400, damping: 10 }}
+			>
 				<Paper
 					sx={{
 						bgcolor: "#62ffda",
@@ -23,8 +23,8 @@ const BasicPaper: React.FC<IPaperProps> = (props) => {
 				>
 					{props.skill}
 				</Paper>
-			</Box>
-		</motion.div>
+			</motion.div>
+		</Box>
 	);
 };
 

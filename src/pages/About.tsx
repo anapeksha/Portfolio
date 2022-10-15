@@ -29,8 +29,7 @@ const About: React.FC = () => {
 			<Box sx={{ display: "flex" }}>
 				<Grid
 					container
-					justifyContent="space-evenly"
-					alignItems="center"
+					justifyContent="space-around"
 					spacing={2}
 					sx={{ mr: 2 }}
 				>
