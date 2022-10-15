@@ -6,8 +6,8 @@ const BasicPaper: React.FC<IPaperProps> = (props) => {
 	return (
 		<Box sx={{ display: "flex", flexWrap: "wrap" }}>
 			<motion.div
-				whileHover={{ scale: 1.4 }}
-				whileTap={{ scale: 1.4 }}
+				whileHover={{ scale: 1.2 }}
+				whileTap={{ scale: 1.2 }}
 				transition={{ type: "spring", stiffness: 400, damping: 10 }}
 			>
 				<Paper
