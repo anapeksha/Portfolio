@@ -6,6 +6,7 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import { motion } from "framer-motion";
 import ITimelineProps from "../interfaces/ITimelineProps";
 
 const TimeLine: React.FC<ITimelineProps> = (props) => {
@@ -18,9 +19,15 @@ const TimeLine: React.FC<ITimelineProps> = (props) => {
 							{d.company}
 						</TimelineOppositeContent>
 						<TimelineSeparator>
-							<TimelineDot color="secondary">
-								<WorkIcon color="primary" />
-							</TimelineDot>
+							<motion.div
+								whileHover={{ scale: 1.2 }}
+								whileTap={{ scale: 1.2 }}
+								transition={{ type: "spring", stiffness: 400, damping: 10 }}
+							>
+								<TimelineDot color="secondary">
+									<WorkIcon color="primary" />
+								</TimelineDot>
+							</motion.div>
 							<TimelineConnector sx={{ bgcolor: "secondary.main" }} />
 						</TimelineSeparator>
 						<TimelineContent sx={{ m: "auto 0" }} variant="subtitle2">
