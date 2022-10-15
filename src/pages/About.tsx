@@ -35,7 +35,7 @@ const About: React.FC = () => {
 				>
 					{skills.map((skill, i) => {
 						return (
-							<Grid item xs={4} md={3} xl={2} key={i}>
+							<Grid item xs={6} md={3} xl={2} key={i}>
 								<BasicPaper skill={skill} />
 							</Grid>
 						);
