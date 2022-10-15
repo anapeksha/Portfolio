@@ -46,6 +46,8 @@ const Home: React.FC = () => {
 				<a
 					style={{ color: "#62ffda", textDecoration: "none" }}
 					href="https://www.mindtree.com"
+					rel="noreferrer"
+					target="_blank"
 				>
 					Mindtree Ltd.
 				</a>
