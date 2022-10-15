@@ -8,9 +8,7 @@ on:
     branches: [main]
     paths-ignore:
       - README.md
-      - assets
-  pull_request:
-    branches: [main]
+      - LICENSE
 
 jobs:
   build:
