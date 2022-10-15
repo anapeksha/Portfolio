@@ -1,6 +1,6 @@
 interface tempTimeline {
 	company: string;
-	designation: string;
+	designation: Array<string>;
 }
 
 interface ITimelineProps {

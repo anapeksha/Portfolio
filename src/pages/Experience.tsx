@@ -3,12 +3,9 @@ import Timeline from "../components/Timeline";
 const timelineProps = [
 	{
 		company: "Mindtree",
-		designation: "Software Engineer Trainee",
+		designation: ["Software Engineer Trainee", "Software Engineer"],
 	},
-	{
-		company: "Mindtree",
-		designation: "Software Engineer",
-	},
+	
 ];
 
 const Experience: React.FC = () => {
