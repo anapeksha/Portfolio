@@ -17,6 +17,7 @@ const BasicPaper: React.FC<IPaperProps> = (props) => {
 						width: 90,
 						textAlign: "center",
 						fontSize: 20,
+						padding: "2px",
 						cursor: "pointer",
 					}}
 					elevation={10}
