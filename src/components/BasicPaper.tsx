@@ -14,11 +14,12 @@ const BasicPaper: React.FC<IPaperProps> = (props) => {
 					sx={{
 						bgcolor: "#62ffda",
 						color: "#102137",
-						width: 90,
+						width: 95,
 						textAlign: "center",
 						fontSize: 20,
 						padding: "2px",
 						cursor: "pointer",
+						overflowX: "auto",
 					}}
 					elevation={10}
 				>
