@@ -21,9 +21,12 @@ const About: React.FC = () => {
 			id="about"
 			sx={{ display: "flex", ml: 4, justifyContent: "space-between" }}
 		>
-			<Box sx={{ display: "flex", mr: 2 }}>
+			<Box sx={{ display: "flex", flexWrap: "wrap", mr: 2 }}>
 				<CustomTypography variant="h5" gutterBottom>
-					Full Stack Developer working from Kolkata
+					A growing software developer with a passion to build.{<br />}
+					Every code has a mind behind, and I envision my passion {<br />}a
+					route to innovate programs that highlight efficiency, competence, and
+					a channel for success.
 				</CustomTypography>
 			</Box>
 			<Box sx={{ display: "flex" }}>

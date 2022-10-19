@@ -42,14 +42,14 @@ const Home: React.FC = () => {
 				curious and hunting solutions in the tech space.
 			</CustomTypography>
 			<CustomTypography variant="h6" sx={{ mb: 4 }}>
-				Working as a Software Engineer at{" "}
+				Working from{" "}
 				<a
 					style={{ color: "#62ffda", textDecoration: "none" }}
-					href="https://www.mindtree.com"
+					href="https://goo.gl/maps/TbrqBXw6tVo6a7kW7"
 					rel="noreferrer"
 					target="_blank"
 				>
-					Mindtree Ltd.
+					Kolkata
 				</a>
 			</CustomTypography>
 			<Box sx={{ mb: 4 }}>
