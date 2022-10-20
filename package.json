@@ -16,6 +16,7 @@
 		"framer-motion": "^7.3.6",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-loading": "^2.0.3",
 		"react-pdfobject": "^1.2.0",
 		"react-scripts": "5.0.1",
 		"react-scroll-to-top": "^3.0.0",
@@ -53,7 +54,7 @@
 		"@testing-library/react": "^13.0.0",
 		"@testing-library/user-event": "^13.2.1",
 		"@types/jest": "^27.0.1",
-		"gh-pages": "^4.0.0",
-		"copyfiles": "^2.4.1"
+		"copyfiles": "^2.4.1",
+		"gh-pages": "^4.0.0"
 	}
 }
