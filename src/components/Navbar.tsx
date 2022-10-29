@@ -1,14 +1,26 @@
+import CallRoundedIcon from "@mui/icons-material/CallRounded";
+import InfoRoundedIcon from "@mui/icons-material/InfoRounded";
+import TrendingUpRoundedIcon from "@mui/icons-material/TrendingUpRounded";
+import WorkRoundedIcon from "@mui/icons-material/WorkRounded";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Toolbar from "@mui/material/Toolbar";
+import BasicSpeedDial from "./BasicSpeedDial";
 
-const pages: Array<{ name: string; url: string }> = [
-	{ name: "Experience", url: "#experience" },
-	{ name: "Work", url: "#work" },
-	{ name: "About", url: "#about" },
-	{ name: "Contact", url: "#contact" },
+const actions = [
+	{
+		icon: <TrendingUpRoundedIcon color="primary" />,
+		name: "Experience",
+		url: "#experience",
+	},
+	{ icon: <WorkRoundedIcon color="primary" />, name: "Work", url: "#work" },
+	{ icon: <InfoRoundedIcon color="primary" />, name: "About", url: "#about" },
+	{
+		icon: <CallRoundedIcon color="primary" />,
+		name: "Contact",
+		url: "#contact",
+	},
 ];
 
 const Navbar: React.FC = () => {
@@ -17,15 +29,7 @@ const Navbar: React.FC = () => {
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
 					<Box sx={{ flexGrow: 1, display: { xs: "flex", md: "flex" } }}>
-						{pages.map((page, i: number) => (
-							<Button
-								key={i}
-								sx={{ my: 2, color: "white", display: "block" }}
-								href={page.url}
-							>
-								{page.name}
-							</Button>
-						))}
+						<BasicSpeedDial actions={actions} />
 					</Box>
 				</Toolbar>
 			</Container>
