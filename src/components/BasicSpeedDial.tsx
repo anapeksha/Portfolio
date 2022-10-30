@@ -6,14 +6,14 @@ import CustomSpeedDial from "../styles/CustomSpeedDial.style";
 const BasicSpeedDial: React.FC<ISpeedDialProps> = (props) => {
 	return (
 		<CustomSpeedDial
-			ariaLabel="SpeedDial basic example"
+			ariaLabel="SpeedDial Menu"
 			icon={<MenuRoundedIcon />}
 			direction="right"
 		>
 			{props.actions.map((action, i) => (
 				<SpeedDialAction
 					sx={{
-						backgroundColor: "#424242",
+						backgroundColor: "#686868",
 					}}
 					key={i}
 					icon={action.icon}
