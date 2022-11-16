@@ -22,6 +22,7 @@ const BasicPaper: React.FC<IPaperProps> = (props) => {
 						overflowX: "auto",
 					}}
 					elevation={10}
+					onClick={() => window.open(props.url)}
 				>
 					{props.skill}
 				</Paper>

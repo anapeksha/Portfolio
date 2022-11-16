@@ -3,16 +3,16 @@ import BasicPaper from "../components/BasicPaper";
 import CustomTypography from "../styles/CustomTypography.style";
 
 const skills = [
-	"React",
-	"Redux",
-	"MUI",
-	"C++",
-	"Javascript",
-	"Typescript",
-	"Express",
-	"Git",
-	"Github",
-	"Python",
+	{ skill: "React", url: "https://reactjs.org" },
+	{ skill: "Redux", url: "https://redux.js.org" },
+	{ skill: "MUI", url: "https://mui.com" },
+	{ skill: "C++", url: "https://cplusplus.com" },
+	{ skill: "Javascript", url: "https://www.javascript.com" },
+	{ skill: "Typescript", url: "https://www.typescriptlang.org" },
+	{ skill: "Express", url: "https://expressjs.com" },
+	{ skill: "Git", url: "https://git-scm.com" },
+	{ skill: "Github", url: "https://github.com" },
+	{ skill: "Python", url: "https://www.python.org" },
 ];
 
 const About: React.FC = () => {
@@ -24,10 +24,10 @@ const About: React.FC = () => {
 				highlight efficiency, competence, and a channel for success.
 			</CustomTypography>
 			<Grid container justifyContent="space-around" spacing={2} sx={{ mr: 2 }}>
-				{skills.map((skill, i) => {
+				{skills.map((data, i) => {
 					return (
 						<Grid item xs={6} md={3} xl={2} key={i}>
-							<BasicPaper skill={skill} />
+							<BasicPaper skill={data.skill} url={data.url} />
 						</Grid>
 					);
 				})}

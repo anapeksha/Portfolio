@@ -2,11 +2,11 @@ import BasicGrid from "../components/BasicGrid";
 
 const gridProps = [
 	{
-		title: "Finderbar",
-		description: "A movie searching app",
-		githubUrl: "https://github.com/anapeksha/finderbar",
-		url: "https://anapeksha.github.io/Finderbar",
-		techs: ["Mui", "React", "Animate.css", "Emotion", "PWA"],
+		title: "Cineflick",
+		description: "A full stack movie searching app",
+		githubUrl: "https://github.com/anapeksha/cineflick",
+		url: "https://cineflick.vercel.app",
+		techs: ["Mui", "Next.js", "SSR", "Emotion"],
 	},
 	{
 		title: "Image Compressor",
