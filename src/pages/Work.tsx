@@ -5,7 +5,7 @@ const gridProps = [
 		title: "Cineflick",
 		description: "A full stack movie searching app",
 		githubUrl: "https://github.com/anapeksha/cineflick",
-		url: "https://cineflick.vercel.app",
+		url: "https://cineflick-anapeksha.netlify.app",
 		techs: ["Mui", "Next.js", "SSR", "Emotion"],
 	},
 	{
