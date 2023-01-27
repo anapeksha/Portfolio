@@ -13,6 +13,7 @@ const skills = [
 	{ skill: "Git", url: "https://git-scm.com" },
 	{ skill: "Github", url: "https://github.com" },
 	{ skill: "Python", url: "https://www.python.org" },
+	{ skill: "Nextjs", url: "https://nextjs.org" },
 ];
 
 const About: React.FC = () => {
