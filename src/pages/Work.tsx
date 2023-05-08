@@ -43,14 +43,7 @@ const gridProps = [
 			"Animate.css",
 			"PWA",
 		],
-	},
-	{
-		title: "Password Generator",
-		description: "Generate random passwords",
-		githubUrl: "https://github.com/anapeksha/password-generator-frontend",
-		url: "https://anapeksha.github.io/password-generator-frontend",
-		techs: ["Mui", "React", "Express", "Crypto"],
-	},
+	}
 ];
 
 const Work: React.FC = () => {
