@@ -1,5 +1,5 @@
 {
-	"short_name": "Anapeksha",
+	"short_name": "AM",
 	"name": "Anapeksha Mukherjee",
 	"icons": [
 		{
@@ -8,24 +8,14 @@
 			"type": "image/x-icon"
 		},
 		{
-			"src": "logo16.png",
+			"src": "logo128.png",
 			"type": "image/png",
-			"sizes": "16x16"
+			"sizes": "128x128"
 		},
 		{
-			"src": "logo32.png",
+			"src": "logo512.png",
 			"type": "image/png",
-			"sizes": "32x32"
-		},
-		{
-			"src": "logo64.png",
-			"type": "image/png",
-			"sizes": "64x64"
-		},
-		{
-			"src": "logo96.png",
-			"type": "image/png",
-			"sizes": "96x96"
+			"sizes": "512x512"
 		}
 	],
 	"start_url": ".",

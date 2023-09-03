@@ -1,74 +1,159 @@
-import { Box, Button } from "@mui/material";
-import { useState } from "react";
-import wave from "../assets/wave.gif";
-import Popover from "../components/Popover";
-import CustomTypography from "../styles/CustomTypography.style";
+import { Box, Button, Divider, Grid, Stack, Typography } from "@mui/material";
+import Typewriter from "typewriter-effect";
+import homeAvatar from "../assets/home-avatar.svg";
+import { homeTypewriterText } from "../lib/Constants";
 
-const Home: React.FC = () => {
-	const [modalOpen, setModalOpen] = useState<boolean>(false);
-
+const Home = () => {
 	return (
-		<Box id="#" sx={{ ml: 4 }}>
-			<CustomTypography
-				variant="h1"
-				className="animate__animated animate__fadeInUp animate__fast"
-			>
-				hi
-				<img src={wave} alt="wave" height="75" width="75" />
-			</CustomTypography>
-			<CustomTypography
-				variant="h3"
-				className="animate__animated animate__fadeInUp"
-			>
-				I am Anapeksha Mukherjee.
-			</CustomTypography>
-			<CustomTypography
-				variant="h4"
-				className="animate__animated animate__fadeInUp animate__slow"
-				style={{
-					color: "#62ffda",
+		<div>
+			<Box
+				display="flex"
+				height="100vh"
+				sx={{
+					backgroundImage: `url(${homeAvatar})`,
+					backgroundSize: "100vw 100vh",
+					opacity: "0.9",
 				}}
 			>
-				intrigued,
-			</CustomTypography>
-			<CustomTypography
-				variant="h4"
-				className="animate__animated animate__fadeInUp animate__slower"
-				style={{
-					color: "#62ffda",
-				}}
-				gutterBottom
-			>
-				curious and hunting solutions in the tech space.
-			</CustomTypography>
-			<CustomTypography variant="h6" sx={{ mb: 4 }}>
-				Working from{" "}
-				<a
-					style={{ color: "#62ffda", textDecoration: "none" }}
-					href="https://goo.gl/maps/TbrqBXw6tVo6a7kW7"
-					rel="noreferrer"
-					target="_blank"
-				>
-					Kolkata
-				</a>
-			</CustomTypography>
-			<Box sx={{ mb: 4 }}>
-				<Button
-					variant="contained"
-					size="large"
-					color="secondary"
-					style={{
-						color: "#091c35",
-					}}
-					onClick={() => {
-						setModalOpen(true);
+				<Typography
+					sx={{
+						display: "flex",
+						position: "relative",
+						top: "20%",
+						left: "75%",
+						transform: "translateX(-65%)",
+						fontFamily: "'Fira Code', monospace",
+						fontWeight: "700",
+						fontSize: "7vh",
 					}}
 				>
-					View CV
-				</Button>
+					<Typewriter
+						options={{
+							strings: homeTypewriterText,
+							autoStart: true,
+							delay: 70,
+							deleteSpeed: 2,
+						}}
+					/>
+				</Typography>
 			</Box>
-			<Popover open={modalOpen} setOpen={setModalOpen} />
-		</Box>
+			<Box
+				display="flex"
+				flexDirection="column"
+				style={{ backgroundColor: "#c9cddf" }}
+				padding="2%"
+			>
+				<Typography
+					style={{
+						fontFamily: "'Wix Madefor Display', sans-serif",
+						fontWeight: "700",
+						fontSize: "6vh",
+					}}
+				>
+					Out of everyone,
+				</Typography>
+				<Typography
+					style={{
+						fontFamily: "'Wix Madefor Display', sans-serif",
+						fontWeight: "700",
+						fontSize: "6vh",
+					}}
+					gutterBottom
+				>
+					Why Me?
+				</Typography>
+				<Grid container spacing={5} paddingBottom={5}>
+					<Grid item xs={6} md={4} xl={4}>
+						<Stack spacing={1}>
+							<Divider />
+							<Typography variant="h6">Proven Track Record</Typography>
+							<Typography variant="body1">
+								I have a track record of delivering high-quality software
+								solutions for a wide range of clients and projects.
+							</Typography>
+						</Stack>
+					</Grid>
+					<Grid item xs={6} md={4} xl={4}>
+						<Stack spacing={1}>
+							<Divider />
+							<Typography variant="h6">Technical Expertise</Typography>
+							<Typography variant="body1">
+								With proficiency in various programming languages, frameworks,
+								and tools, I can tackle diverse software development challenges.
+							</Typography>
+						</Stack>
+					</Grid>
+					<Grid item xs={6} md={4} xl={4}>
+						<Stack spacing={1}>
+							<Divider />
+							<Typography variant="h6">Continuous Learning</Typography>
+							<Typography variant="body1">
+								The tech world evolves rapidly, and I stay up-to-date with the
+								latest trends and technologies to offer the best solutions.
+							</Typography>
+						</Stack>
+					</Grid>
+					<Grid item xs={6} md={4} xl={4}>
+						<Stack spacing={1}>
+							<Divider />
+							<Typography variant="h6">Proven Track Record</Typography>
+							<Typography variant="body1">
+								I have a track record of delivering high-quality software
+								solutions for a wide range of clients and projects.
+							</Typography>
+						</Stack>
+					</Grid>
+					<Grid item xs={6} md={4} xl={4}>
+						<Stack spacing={1}>
+							<Divider />
+							<Typography variant="h6">Technical Expertise</Typography>
+							<Typography variant="body1">
+								With proficiency in various programming languages, frameworks,
+								and tools, I can tackle diverse software development challenges.
+							</Typography>
+						</Stack>
+					</Grid>
+					<Grid item xs={6} md={4} xl={4}>
+						<Stack spacing={1}>
+							<Divider />
+							<Typography variant="h6">Continuous Learning</Typography>
+							<Typography variant="body1">
+								The tech world evolves rapidly, and I stay up-to-date with the
+								latest trends and technologies to offer the best solutions.
+							</Typography>
+						</Stack>
+					</Grid>
+				</Grid>
+				<Typography
+					style={{
+						fontFamily: "'Wix Madefor Display', sans-serif",
+						fontWeight: "700",
+						fontSize: "6vh",
+					}}
+				>
+					Don't just take my word for it
+				</Typography>
+				<Typography
+					style={{
+						fontFamily: "'Wix Madefor Display', sans-serif",
+						fontWeight: "700",
+						fontSize: "6vh",
+					}}
+					gutterBottom
+				>
+					- Say a Hi.
+				</Typography>
+				<Box>
+					<Button
+						size="large"
+						variant="contained"
+						sx={{ backgroundColor: "#3d5e94" }}
+					>
+						Get your solution
+					</Button>
+				</Box>
+			</Box>
+		</div>
 	);
 };
 
