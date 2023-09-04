@@ -12,7 +12,7 @@ const Header = () => {
 				<Toolbar>
 					<IconButton
 						edge="start"
-						sx={{ display: { xs: "block", md: "none" } }}
+						sx={{ flexGrow: 1, display: { xs: "block", md: "none" } }}
 					>
 						<Menu />
 					</IconButton>
