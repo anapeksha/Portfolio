@@ -1,5 +1,5 @@
 import { Menu } from "@mui/icons-material";
-import { AppBar, Button, IconButton, Stack, Toolbar } from "@mui/material";
+import { AppBar, Box, Button, IconButton, Stack, Toolbar } from "@mui/material";
 import { useLocation, useNavigate } from "react-router-dom";
 import { navItems } from "../lib/Constants";
 
@@ -10,12 +10,15 @@ const Header = () => {
 		<header>
 			<AppBar color="transparent" elevation={0} position="static">
 				<Toolbar>
+					<Box sx={{ flexGrow: 1 }}>
 					<IconButton
 						edge="start"
-						sx={{ flexGrow: 1, display: { xs: "block", md: "none" } }}
+						sx={{ display: { xs: "flex", md: "none" } }}
 					>
 						<Menu />
 					</IconButton>
+					</Box>
+					</Toolbar>
 					<Stack
 						sx={{ flexGrow: 1, display: { xs: "none", md: "block" } }}
 						direction="row"
