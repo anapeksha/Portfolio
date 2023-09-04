@@ -1,21 +1,25 @@
 import { Menu } from "@mui/icons-material";
 import { AppBar, Button, IconButton, Stack, Toolbar } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { navItems } from "../lib/Constants";
 
 const Header = () => {
 	const navigate = useNavigate();
+	const location = useLocation();
 	return (
 		<header>
 			<AppBar color="transparent" elevation={0} position="static">
 				<Toolbar>
 					<IconButton
 						edge="start"
-						sx={{ display: { xs: "block", sm: "none" } }}
+						sx={{ display: { xs: "block", md: "none" } }}
 					>
 						<Menu />
 					</IconButton>
-					<Stack sx={{ display: { xs: "none", sm: "block" } }} direction="row">
+					<Stack
+						sx={{ flexGrow: 1, display: { xs: "none", md: "block" } }}
+						direction="row"
+					>
 						{navItems.map((value, index) => {
 							return (
 								<Button
@@ -28,6 +32,15 @@ const Header = () => {
 							);
 						})}
 					</Stack>
+					{location.pathname !== "/contact" ? (
+						<Button
+							sx={{ flexGrow: 0 }}
+							variant="contained"
+							onClick={() => navigate("contact")}
+						>
+							Say Hello!
+						</Button>
+					) : null}
 				</Toolbar>
 			</AppBar>
 		</header>
