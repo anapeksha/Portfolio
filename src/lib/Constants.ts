@@ -10,17 +10,83 @@ const theme = createTheme({
 
 const homeTypewriterText = [
 	"I",
-	"build code.",
+	"build code.</>",
 	"I",
 	"create solutions.",
 	"I",
 	"shape innovation.",
 ];
 
+const homeCardContent = [
+	{
+		heading: "Proven Track Record",
+		body: "I have a track record of delivering high-quality software solutions for a wide range of clients and projects.",
+	},
+	{
+		heading: "Technical Expertise",
+		body: "With proficiency in various programming languages, frameworks, and tools, I can tackle diverse software development challenges.",
+	},
+	{
+		heading: "Continuous Learning",
+		body: "The tech world evolves rapidly, and I stay up-to-date with the latest trends and technologies to offer the best solutions.",
+	},
+	{
+		heading: "Passion-Driven",
+		body: "My passion for software development means I'm committed to delivering top-notch results and exceeding your expectations.",
+	},
+	{
+		heading: "Adaptable",
+		body: "Your project requirements may change, and I can adapt to suit your evolving needs. Flexibility is a strength.",
+	},
+	{
+		heading: "Attention to Detail",
+		body: "I pay close attention to every detail, ensuring that your software is reliable and functions smoothly.",
+	},
+];
+
 const navItems = [
 	{ name: "Home", url: "/" },
 	{ name: "About", url: "about" },
-	{ name: "Blog", url: "blog" },
+	{ name: "Projects", url: "projects" },
 ];
 
-export { homeTypewriterText, navItems, theme };
+const connectFormData = [
+	{
+		type: "text",
+		label: "Name",
+		name: "name",
+		required: true,
+	},
+	{
+		type: "email",
+		label: "Email",
+		name: "email",
+		required: true,
+	},
+	{
+		type: "number",
+		label: "Phone",
+		name: "ph_no",
+		required: false,
+	},
+	{
+		type: "text",
+		label: "Date and Time",
+		name: "date_time",
+		required: false,
+	},
+	{
+		type: "text",
+		label: "Message",
+		name: "message",
+		required: true,
+	},
+];
+
+export {
+	connectFormData,
+	homeCardContent,
+	homeTypewriterText,
+	navItems,
+	theme,
+};
