@@ -1,9 +1,12 @@
-import { Box, Button, Divider, Grid, Stack, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import homeAvatar from "../assets/home-avatar.svg";
-import { homeTypewriterText } from "../lib/Constants";
+import HomeCard from "../components/HomeCard";
+import { homeCardContent, homeTypewriterText } from "../lib/Constants";
 
 const Home = () => {
+	const navigate = useNavigate();
 	return (
 		<div>
 			<Box
@@ -18,10 +21,8 @@ const Home = () => {
 				<Typography
 					sx={{
 						display: "flex",
-						position: "relative",
-						top: "20%",
-						left: "75%",
-						transform: "translateX(-65%)",
+						justifyContent: "flex-end",
+						alignItems: "flex-start",
 						fontFamily: "'Fira Code', monospace",
 						fontWeight: "700",
 						fontSize: "7vh",
@@ -63,66 +64,13 @@ const Home = () => {
 					Why Me?
 				</Typography>
 				<Grid container spacing={5} paddingBottom={5}>
-					<Grid item xs={6} md={4} xl={4}>
-						<Stack spacing={1}>
-							<Divider />
-							<Typography variant="h6">Proven Track Record</Typography>
-							<Typography variant="body1">
-								I have a track record of delivering high-quality software
-								solutions for a wide range of clients and projects.
-							</Typography>
-						</Stack>
-					</Grid>
-					<Grid item xs={6} md={4} xl={4}>
-						<Stack spacing={1}>
-							<Divider />
-							<Typography variant="h6">Technical Expertise</Typography>
-							<Typography variant="body1">
-								With proficiency in various programming languages, frameworks,
-								and tools, I can tackle diverse software development challenges.
-							</Typography>
-						</Stack>
-					</Grid>
-					<Grid item xs={6} md={4} xl={4}>
-						<Stack spacing={1}>
-							<Divider />
-							<Typography variant="h6">Continuous Learning</Typography>
-							<Typography variant="body1">
-								The tech world evolves rapidly, and I stay up-to-date with the
-								latest trends and technologies to offer the best solutions.
-							</Typography>
-						</Stack>
-					</Grid>
-					<Grid item xs={6} md={4} xl={4}>
-						<Stack spacing={1}>
-							<Divider />
-							<Typography variant="h6">Proven Track Record</Typography>
-							<Typography variant="body1">
-								I have a track record of delivering high-quality software
-								solutions for a wide range of clients and projects.
-							</Typography>
-						</Stack>
-					</Grid>
-					<Grid item xs={6} md={4} xl={4}>
-						<Stack spacing={1}>
-							<Divider />
-							<Typography variant="h6">Technical Expertise</Typography>
-							<Typography variant="body1">
-								With proficiency in various programming languages, frameworks,
-								and tools, I can tackle diverse software development challenges.
-							</Typography>
-						</Stack>
-					</Grid>
-					<Grid item xs={6} md={4} xl={4}>
-						<Stack spacing={1}>
-							<Divider />
-							<Typography variant="h6">Continuous Learning</Typography>
-							<Typography variant="body1">
-								The tech world evolves rapidly, and I stay up-to-date with the
-								latest trends and technologies to offer the best solutions.
-							</Typography>
-						</Stack>
-					</Grid>
+					{homeCardContent.map((value, index) => {
+						return (
+							<Grid item xs={6} md={4} xl={4}>
+								<HomeCard heading={value.heading} body={value.body} />
+							</Grid>
+						);
+					})}
 				</Grid>
 				<Typography
 					style={{
@@ -147,7 +95,8 @@ const Home = () => {
 					<Button
 						size="large"
 						variant="contained"
-						sx={{ backgroundColor: "#3d5e94" }}
+						sx={{ backgroundColor: "#3d5e94", mb: "2%" }}
+						onClick={() => navigate("contact")}
 					>
 						Get your solution
 					</Button>
