@@ -1,4 +1,5 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
+import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import homeAvatar from "../assets/home-avatar.svg";
@@ -7,6 +8,15 @@ import { homeCardContent, homeTypewriterText } from "../lib/Constants";
 
 const Home = () => {
 	const navigate = useNavigate();
+	const boxRef = useRef<HTMLDivElement>(null);
+	useEffect(() => {
+		setTimeout(() => {
+			boxRef.current?.scrollIntoView({
+				behavior: "smooth",
+				block: "end",
+			});
+		}, 2000);
+	}, []);
 	return (
 		<div>
 			<Box
@@ -18,31 +28,35 @@ const Home = () => {
 					opacity: "0.9",
 				}}
 			>
-				<Typography
-					sx={{
-						display: "flex",
-						justifyContent: "flex-end",
-						alignItems: "flex-start",
-						fontFamily: "'Fira Code', monospace",
-						fontWeight: "700",
-						fontSize: "7vh",
-					}}
-				>
-					<Typewriter
-						options={{
-							strings: homeTypewriterText,
-							autoStart: true,
-							delay: 70,
-							deleteSpeed: 2,
+				<Box display="flex" height="40vh" alignItems="center" marginLeft="1%">
+					<Typography
+						sx={{
+							display: "flex",
+							justifyContent: "flex-end",
+							alignItems: "flex-start",
+							fontFamily: "'Fira Code', monospace",
+							fontWeight: "700",
+							fontSize: "7vh",
 						}}
-					/>
-				</Typography>
+					>
+						<Typewriter
+							options={{
+								strings: homeTypewriterText,
+								autoStart: true,
+								delay: 70,
+								deleteSpeed: 2,
+								loop: true,
+							}}
+						/>
+					</Typography>
+				</Box>
 			</Box>
 			<Box
 				display="flex"
 				flexDirection="column"
 				style={{ backgroundColor: "#c9cddf" }}
 				padding="2%"
+				ref={boxRef}
 			>
 				<Typography
 					style={{

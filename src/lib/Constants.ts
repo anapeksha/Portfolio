@@ -1,3 +1,4 @@
+import { GitHub, LinkedIn, Mail } from "@mui/icons-material";
 import { createTheme } from "@mui/material";
 
 const theme = createTheme({
@@ -83,11 +84,27 @@ const connectFormData = [
 	},
 ];
 
+const footerContactData = [
+	{ url: "", icon: LinkedIn },
+	{ url: "https://www.github.com/anapeksha", icon: GitHub },
+	{ url: "mailto:anapeksha.mukherjee.work@gmail.com", icon: Mail },
+];
+
+const emailJSConfig = {
+	contact: {
+		SERVICE_ID: process.env.REACT_APP_EMAILJS_SERVICE_ID,
+		TEMPLATE_ID: process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+		PUBLIC_KEY: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+	},
+};
+
 const drawerWidth = 240;
 
 export {
 	connectFormData,
 	drawerWidth,
+	emailJSConfig,
+	footerContactData,
 	homeCardContent,
 	homeTypewriterText,
 	navItems,
