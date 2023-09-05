@@ -15,7 +15,7 @@ const Home = () => {
 				behavior: "smooth",
 				block: "end",
 			});
-		}, 2000);
+		}, 16000);
 	}, []);
 	return (
 		<div>
