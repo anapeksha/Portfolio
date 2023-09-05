@@ -83,8 +83,11 @@ const connectFormData = [
 	},
 ];
 
+const drawerWidth = 240;
+
 export {
 	connectFormData,
+	drawerWidth,
 	homeCardContent,
 	homeTypewriterText,
 	navItems,
