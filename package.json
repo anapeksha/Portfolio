@@ -4,6 +4,7 @@
 	"private": true,
 	"dependencies": {
 		"@contentful/rich-text-react-renderer": "^15.17.1",
+		"@emailjs/browser": "^3.11.0",
 		"@emotion/react": "^11.11.1",
 		"@emotion/styled": "^11.11.0",
 		"@fontsource-variable/fira-code": "^5.0.8",

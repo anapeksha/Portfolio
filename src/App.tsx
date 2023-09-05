@@ -2,6 +2,7 @@ import { ThemeProvider } from "@mui/material";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { theme } from "./lib/Constants";
 import Contact from "./pages/Contact";
@@ -16,6 +17,7 @@ function App() {
 					<Route path="/" index element={<Home />} />
 					<Route path="contact" index element={<Contact />} />
 				</Routes>
+				<Footer />
 			</ThemeProvider>
 		</LocalizationProvider>
 	);
