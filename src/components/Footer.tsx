@@ -28,7 +28,13 @@ const Footer = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <Grid container display="flex" alignItems="center" padding={1} rowSpacing={2}>
+    <Grid
+      container
+      display="flex"
+      alignItems="center"
+      padding={1}
+      rowSpacing={2}
+    >
       <Grid item xs={12} sm={6}>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Stack direction="row" spacing={4}>
@@ -68,13 +74,18 @@ const Footer = () => {
         <Box sx={{ display: "flex" }}>
           <form ref={formRef} onSubmit={submitForm}>
             <Stack direction="row" spacing={2}>
-              <TextField label="Email" name="newsletter" type="email" required/>
+              <TextField
+                label="Email"
+                name="newsletter"
+                type="email"
+                required
+              />
               <Button
-			  	type="submit"
+                type="submit"
                 variant="contained"
                 endIcon={<ArrowForward />}
                 color="inherit"
-				onSubmit={submitForm}
+                onSubmit={submitForm}
               >
                 Newsletter
               </Button>
