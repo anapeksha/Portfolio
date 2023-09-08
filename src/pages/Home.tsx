@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import homeAvatar from "../assets/home-avatar.svg";
 import HomeCard from "../components/HomeCard";
+import Footer from "../components/Footer";
 import { homeCardContent, homeTypewriterText } from "../lib/Constants";
 
 const Home = () => {
@@ -54,7 +55,6 @@ const Home = () => {
       <Box
         display="flex"
         flexDirection="column"
-        style={{ backgroundColor: "#c9cddf" }}
         padding="2%"
         ref={boxRef}
       >
@@ -116,6 +116,7 @@ const Home = () => {
           </Button>
         </Box>
       </Box>
+      <Footer/>
     </div>
   );
 };
