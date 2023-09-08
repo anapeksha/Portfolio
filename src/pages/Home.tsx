@@ -80,7 +80,7 @@ const Home = () => {
 				<Grid container spacing={5} paddingBottom={5}>
 					{homeCardContent.map((value, index) => {
 						return (
-							<Grid item xs={6} md={4} xl={4}>
+							<Grid item xs={6} md={4} xl={4} key={index}>
 								<HomeCard heading={value.heading} body={value.body} />
 							</Grid>
 						);

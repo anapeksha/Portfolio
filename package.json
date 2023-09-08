@@ -1,7 +1,8 @@
 {
 	"name": "portfolio",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"private": true,
+	"homepage": "https://anapeksha.in",
 	"dependencies": {
 		"@contentful/rich-text-react-renderer": "^15.17.1",
 		"@emailjs/browser": "^3.11.0",
