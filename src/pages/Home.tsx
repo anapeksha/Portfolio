@@ -13,7 +13,7 @@ const Home = () => {
     setTimeout(() => {
       boxRef.current?.scrollIntoView({
         behavior: "smooth",
-        block: "end",
+        block: "start",
       });
     }, 16000);
   }, []);
