@@ -1,32 +1,32 @@
-import { Card, CardContent, Typography, styled } from "@mui/material";
-import Draggable from "react-draggable";
+import { Card, CardActions, CardContent, styled } from "@mui/material";
+import { ReactNode, CSSProperties } from "react";
+import { motion } from "framer-motion";
 
-interface IAboutCard {
-  body: string;
+interface IDraggableCard {
+  style?: CSSProperties;
+  children: ReactNode;
+  actions?: ReactNode;
 }
 
-const CustomCard = styled(Card)({
-  ":hover": {
-    cursor: "move"
-  }
-})
+const MotionCard = motion(Card, { forwardMotionProps: true });
 
-const DraggableCard = (props: IAboutCard) => {
+const CustomMotionCard = styled(MotionCard)({
+  ":hover": {
+    cursor: "move",
+  },
+});
+
+const DraggableCard = (props: IDraggableCard) => {
   return (
-    <Draggable>
-      <CustomCard sx={{ backgroundColor: "#e1f8e8" }} elevation={6}>
-        <CardContent>
-          <Typography
-            sx={{
-              fontFamily: "'Fira Code', monospace",
-              fontWeight: "700",
-            }}
-          >
-            {props.body}
-          </Typography>
-        </CardContent>
-      </CustomCard>
-    </Draggable>
+    <CustomMotionCard
+      style={props.style}
+      elevation={6}
+      drag
+      whileDrag={{ scale: 1.2 }}
+    >
+      <CardContent>{props.children}</CardContent>
+      <CardActions>{props.actions}</CardActions>
+    </CustomMotionCard>
   );
 };
 

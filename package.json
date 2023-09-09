@@ -17,9 +17,9 @@
 		"animate.css": "^4.1.1",
 		"contentful": "^10.5.1",
 		"dayjs": "^1.11.9",
+		"framer-motion": "^10.16.4",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"react-draggable": "^4.4.5",
 		"react-router-dom": "^6.15.0",
 		"react-scripts": "5.0.1",
 		"typewriter-effect": "^2.20.1"
