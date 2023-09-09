@@ -17,6 +17,14 @@ const aboutTheme = createTheme({
   },
 });
 
+const connectTheme = createTheme({
+  palette: {
+    primary: { main: "#BD1E51" },
+    secondary: { main: "#490B3D" },
+    mode: "light",
+  },
+});
+
 const homeTypewriterText = [
   "I",
   "build code.</>",
@@ -26,13 +34,9 @@ const homeTypewriterText = [
   "shape innovation.",
 ];
 
-const aboutTypewriterText = [
-  "I",
-  "thrive on new technologies.",
-  "I",
-  "solve complex problems.",
-  "I",
-  "am passionate about development",
+const aboutCardText = [
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 ];
 
 const homeCardContent = [
@@ -118,7 +122,8 @@ const emailJSConfig = {
 const drawerWidth = 240;
 
 export {
-  aboutTypewriterText,
+  aboutCardText,
+  connectTheme,
   connectFormData,
   drawerWidth,
   emailJSConfig,
