@@ -1,45 +1,50 @@
-import { Box, Typography } from "@mui/material";
-import Typewriter from "typewriter-effect";
-import aboutAvatar from "../assets/about-avatar.svg"
-import { aboutTypewriterText } from "../lib/Constants";
+import { Box, Grid } from "@mui/material";
+import AboutAvatar from "../assets/about-avatar.svg";
+import { aboutCardText } from "../lib/Constants";
+import DraggableCard from "../components/DraggableCard";
 
 const About = () => {
   return (
     <div>
-        <Box
-        display="flex"
-        height="100vh"
+      <Box
         sx={{
-          backgroundImage: `url(${aboutAvatar})`,
+          display: "flex",
+          height: "100vh",
+          backgroundImage: `url(${AboutAvatar})`,
           backgroundSize: "100vw 100vh",
           opacity: "0.9",
         }}
       >
-        <Box display="flex" height="40vh" alignItems="center" marginLeft="1%">
-          <Typography
-            sx={{
-              display: "flex",
-              justifyContent: "flex-end",
-              alignItems: "flex-start",
-              fontFamily: "'Fira Code', monospace",
-              fontWeight: "700",
-              fontSize: "7vh",
-            }}
-          >
-            <Typewriter
-              options={{
-                strings: aboutTypewriterText,
-                autoStart: true,
-                delay: 70,
-                deleteSpeed: 2,
-                loop: true,
-              }}
-            />
-          </Typography>
-        </Box>
+        <Grid container sx={{ p: 4 }} spacing={2}>
+          {aboutCardText.map((value, index) => {
+            if (index % 2 === 0) {
+              return (
+                <>
+                  <Grid item xs={12} sm={6}>
+                    <DraggableCard body={value} key={index} />
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <Box></Box>
+                  </Grid>
+                </>
+              );
+            } else {
+              return (
+                <>
+                  <Grid item xs={12} sm={6}>
+                    <Box></Box>
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <DraggableCard body={value} key={index} />
+                  </Grid>
+                </>
+              );
+            }
+          })}
+        </Grid>
       </Box>
     </div>
-  )
-}
+  );
+};
 
 export default About;
