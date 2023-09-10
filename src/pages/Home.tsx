@@ -10,6 +10,7 @@ import { homeCardContent, homeTypewriterText } from "../lib/Constants";
 const Home = () => {
   const navigate = useNavigate();
   const boxRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     setTimeout(() => {
       boxRef.current?.scrollIntoView({
@@ -52,12 +53,7 @@ const Home = () => {
           </Typography>
         </Box>
       </Box>
-      <Box
-        display="flex"
-        flexDirection="column"
-        padding="2%"
-        ref={boxRef}
-      >
+      <Box display="flex" flexDirection="column" padding="2%" ref={boxRef}>
         <Typography
           style={{
             fontFamily: "'Wix Madefor Display', sans-serif",
@@ -116,7 +112,7 @@ const Home = () => {
           </Button>
         </Box>
       </Box>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
