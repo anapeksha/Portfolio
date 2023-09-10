@@ -5,7 +5,7 @@ import Carousel from "../components/Carousel";
 import { carouselSteps } from "../lib/Constants";
 
 const Project = () => {
-  const [preview, setPreview] = useState<string>();
+  const [preview, setPreview] = useState<string>("");
   const [carouselStep, setCarouselStep] = useState(0);
   return (
     <div>
@@ -13,7 +13,7 @@ const Project = () => {
         sx={{ display: "flex", justifyContent: "center", minHeight: "100vh" }}
       >
         <Stack spacing={-1}>
-          <Laptop src={preview as string} />
+          <Laptop src={preview} />
           <Carousel
             data={carouselSteps}
             step={carouselStep}
