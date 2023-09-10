@@ -12,6 +12,7 @@ import {
   Button,
   useTheme,
   CardActions,
+  Tooltip,
   IconButton,
 } from "@mui/material";
 
@@ -39,18 +40,22 @@ const Carousel = (props: any) => {
       </CardContent>
 
       <CardActions>
-        <IconButton
-          onClick={() => window.open(props.data[props.step].githubUrl)}
-        >
-          <GitHub color="secondary" />
-        </IconButton>
-        <IconButton
-          onClick={() => {
-            props.setPreview(props.data[props.step].previewUrl);
-          }}
-        >
-          <Visibility color="secondary" />
-        </IconButton>
+        <Tooltip title="GitHub">
+          <IconButton
+            onClick={() => window.open(props.data[props.step].githubUrl)}
+          >
+            <GitHub color="secondary" />
+          </IconButton>
+        </Tooltip>
+        <Tooltip title="Preview">
+          <IconButton
+            onClick={() => {
+              props.setPreview(props.data[props.step].previewUrl);
+            }}
+          >
+            <Visibility color="secondary" />
+          </IconButton>
+        </Tooltip>
       </CardActions>
       <MobileStepper
         variant="dots"
