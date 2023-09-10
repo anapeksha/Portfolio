@@ -159,6 +159,7 @@ const Laptop = (props: ILaptop) => {
             display="flex"
           >
             <embed
+              type="text/html"
               src={props.src}
               style={{ display: "flex", width: "100%", height: "100%" }}
             />
