@@ -1,13 +1,17 @@
 import { Box, Chip, Grid, Stack, Typography } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
+import { useRef } from "react";
 import AboutAvatar from "../assets/about-avatar.svg";
 import { aboutCardText, skills, skillsHeading } from "../lib/Constants";
 import DraggableCard from "../components/DraggableCard";
 
 const About = () => {
+  const parentRef = useRef<Element>(null);
+
   return (
     <div>
       <Box
+        ref={parentRef}
         sx={{
           display: "flex",
           height: "100vh",
@@ -25,6 +29,7 @@ const About = () => {
                   <Grid item xs={12} sm={6}>
                     <DraggableCard
                       key={index}
+                      parent={parentRef}
                       style={{ backgroundColor: "#e1f8e8" }}
                     >
                       <Typography

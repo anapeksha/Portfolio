@@ -17,6 +17,14 @@ const aboutTheme = createTheme({
   },
 });
 
+const projectTheme = createTheme({
+  palette: {
+    primary: { main: "#ff00fe" },
+    secondary: { main: "#bf00fe" },
+    mode: "light",
+  },
+});
+
 const connectTheme = createTheme({
   palette: {
     primary: { main: "#BD1E51" },
@@ -73,7 +81,7 @@ const homeCardContent = [
 const navItems = [
   { name: "Home", url: "/" },
   { name: "About", url: "about" },
-  { name: "Projects", url: "projects" },
+  { name: "Projects", url: "project" },
 ];
 
 const connectFormData = [
@@ -115,6 +123,30 @@ const footerContactData = [
   { url: "mailto:anapeksha.mukherjee.work@gmail.com", icon: Mail },
 ];
 
+const carouselSteps = [
+  {
+    label: "abcd",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    previewUrl: "https://anapeksha.github.io/Pages/",
+    githubUrl: "https://github.com/anapeksha/Pages",
+  },
+  {
+    label: "abcd",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    previewUrl: "https://cineflick-anapeksha.netlify.app/",
+    githubUrl: "https://github.com/anapeksha/Cineflick",
+  },
+  {
+    label: "abcd",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    previewUrl: "",
+    githubUrl: "https://github.com/anapeksha/python-proxy-server",
+  },
+];
+
 const emailJSConfig = {
   contact: {
     SERVICE_ID: process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -129,6 +161,7 @@ export {
   aboutCardText,
   connectTheme,
   connectFormData,
+  carouselSteps,
   drawerWidth,
   emailJSConfig,
   footerContactData,
@@ -139,4 +172,5 @@ export {
   navItems,
   homeTheme,
   aboutTheme,
+  projectTheme,
 };

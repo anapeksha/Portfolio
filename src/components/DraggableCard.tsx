@@ -1,11 +1,12 @@
 import { Card, CardActions, CardContent, styled } from "@mui/material";
-import { ReactNode, CSSProperties } from "react";
+import { ReactNode, CSSProperties, RefObject } from "react";
 import { motion } from "framer-motion";
 
 interface IDraggableCard {
   style?: CSSProperties;
   children: ReactNode;
   actions?: ReactNode;
+  parent?: RefObject<any>;
 }
 
 const MotionCard = motion(Card, { forwardMotionProps: true });
@@ -22,7 +23,9 @@ const DraggableCard = (props: IDraggableCard) => {
       style={props.style}
       elevation={6}
       drag
-      whileDrag={{ scale: 1.2 }}
+      dragConstraints={props.parent}
+      dragSnapToOrigin
+      whileDrag={{ scale: 1.05 }}
     >
       <CardContent>{props.children}</CardContent>
       <CardActions>{props.actions}</CardActions>
