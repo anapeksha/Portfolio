@@ -1,14 +1,6 @@
 import { sendForm } from "@emailjs/browser";
 import { ArrowForward, GitHub, LinkedIn, Mail } from "@mui/icons-material";
-import {
-  Box,
-  Button,
-  IconButton,
-  Stack,
-  TextField,
-  Grid,
-  Tooltip,
-} from "@mui/material";
+import { Box, Button, Stack, TextField, Grid, Chip } from "@mui/material";
 import { FormEvent, useRef } from "react";
 import { emailJSConfig } from "../lib/Constants";
 
@@ -38,35 +30,27 @@ const Footer = () => {
       <Grid item xs={12} sm={6}>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Stack direction="row" spacing={4}>
-            <Tooltip title="GitHub">
-              <IconButton
-                onClick={() => {
-                  window.open("https://www.github.com/anapeksha");
-                }}
-              >
-                <GitHub />
-              </IconButton>
-            </Tooltip>
-            <Tooltip title="LinkedIn">
-              <IconButton
-                onClick={() => {
-                  window.open(
-                    "https://www.linkedin.com/in/anapeksha-mukherjee"
-                  );
-                }}
-              >
-                <LinkedIn />
-              </IconButton>
-            </Tooltip>
-            <Tooltip title="Email">
-              <IconButton
-                onClick={() => {
-                  window.open("mailto:anapeksha.mukherjee.work@gmail.com");
-                }}
-              >
-                <Mail />
-              </IconButton>
-            </Tooltip>
+            <Chip
+              icon={<GitHub />}
+              label="GitHub"
+              onClick={() => {
+                window.open("https://www.github.com/anapeksha");
+              }}
+            />
+            <Chip
+              label="LinkedIn"
+              icon={<LinkedIn />}
+              onClick={() => {
+                window.open("https://www.linkedin.com/in/anapeksha-mukherjee");
+              }}
+            />
+            <Chip
+              label="Email"
+              icon={<Mail />}
+              onClick={() => {
+                window.open("mailto:anapeksha.mukherjee.work@gmail.com");
+              }}
+            />
           </Stack>
         </Box>
       </Grid>

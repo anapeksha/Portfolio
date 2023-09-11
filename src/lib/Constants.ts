@@ -127,7 +127,7 @@ const connectFormData = [
 ];
 
 const footerContactData = [
-  { url: "", icon: LinkedIn },
+  { url: "https://www.linkedin.com/in/anapeksha-mukherjee", icon: LinkedIn },
   { url: "https://www.github.com/anapeksha", icon: GitHub },
   { url: "mailto:anapeksha.mukherjee.work@gmail.com", icon: Mail },
 ];

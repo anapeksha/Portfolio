@@ -137,6 +137,28 @@ const Laptop = (props: ILaptop) => {
             x2="90.5"
             y2="424.5"
           />
+          {!props.src ? (
+            <g>
+              <linearGradient
+                id="SVGID_00000105393007844515792760000015345611525406710198_"
+                gradientUnits="userSpaceOnUse"
+                x1="83.5892"
+                y1="157.5892"
+                x2="174.6575"
+                y2="248.6575"
+              >
+                <stop offset="4.783163e-04" style={{ stopColor: "#9E9E9E" }} />
+                <stop offset="1" style={{ stopColor: "#1D1D1B" }} />
+              </linearGradient>
+              <path
+                style={{
+                  fill: `url(#SVGID_00000105393007844515792760000015345611525406710198_)`,
+                }}
+                d="M274,152.5l-182,209v-202
+      c0-3.86,3.14-7,7-7H274z"
+              />
+            </g>
+          ) : null}
 
           <foreignObject
             width="398"
@@ -146,7 +168,7 @@ const Laptop = (props: ILaptop) => {
             style={
               props.src
                 ? { backgroundColor: "white" }
-                : { backgroundColor: "#490B3D" }
+                : { backgroundColor: "black" }
             }
             display="flex"
           >

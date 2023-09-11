@@ -1,13 +1,23 @@
 import { Button, Grid, TextField, Typography } from "@mui/material";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
+import { sendForm } from "@emailjs/browser";
 import { useRef } from "react";
-import { connectFormData } from "../lib/Constants";
+import { connectFormData, emailJSConfig } from "../lib/Constants";
 
 const Contact = () => {
-  const form = useRef<any>();
+  const formRef = useRef<HTMLFormElement>(null);
   const submitForm = (event: React.FormEvent) => {
     event.preventDefault();
-    console.log(form.current);
+    sendForm(
+      emailJSConfig.contact.SERVICE_ID as string,
+      emailJSConfig.contact.TEMPLATE_ID as string,
+      formRef.current as HTMLFormElement,
+      emailJSConfig.contact.PUBLIC_KEY as string
+    )
+      .then((response) => {
+        return response;
+      })
+      .catch((error) => console.log(error));
   };
   return (
     <Grid
@@ -30,7 +40,7 @@ const Contact = () => {
         >
           It starts with a conversation.
         </Typography>
-        <form ref={form} onSubmit={submitForm}>
+        <form ref={formRef} onSubmit={submitForm}>
           <Grid container spacing={1}>
             {connectFormData.map((data, index) => {
               if (data.name === "message") {
