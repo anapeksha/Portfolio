@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2de8043d.css",
-    "main.js": "/static/js/main.e8e37449.js",
+    "main.css": "/static/css/main.6e3f6a12.css",
+    "main.js": "/static/js/main.b5fafb5a.js",
     "static/media/about-avatar.svg": "/static/media/about-avatar.841ffbf675468c04b0aa7be50556be00.svg",
     "static/media/fira-code-latin-wght-normal.woff2": "/static/media/fira-code-latin-wght-normal.0290acce3ff1bbc4a6c8.woff2",
     "static/media/karla-latin-wght-normal.woff2": "/static/media/karla-latin-wght-normal.765cd74a67609f5a22e8.woff2",
@@ -69,11 +69,11 @@
     "static/media/roboto-greek-ext-300-normal.woff": "/static/media/roboto-greek-ext-300-normal.392a45a84c081c4b412d.woff",
     "static/media/roboto-greek-ext-400-normal.woff": "/static/media/roboto-greek-ext-400-normal.f708607d2a7290fb8bfa.woff",
     "static/media/roboto-greek-ext-700-normal.woff": "/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
-    "main.2de8043d.css.map": "/static/css/main.2de8043d.css.map",
-    "main.e8e37449.js.map": "/static/js/main.e8e37449.js.map"
+    "main.6e3f6a12.css.map": "/static/css/main.6e3f6a12.css.map",
+    "main.b5fafb5a.js.map": "/static/js/main.b5fafb5a.js.map"
   },
   "entrypoints": [
-    "static/css/main.2de8043d.css",
-    "static/js/main.e8e37449.js"
+    "static/css/main.6e3f6a12.css",
+    "static/js/main.b5fafb5a.js"
   ]
 }
