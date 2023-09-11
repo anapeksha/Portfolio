@@ -1,18 +1,10 @@
-import { styled } from "@mui/material";
-
 interface ILaptop {
   src: string;
 }
 
-const CustomSVG = styled("svg")({
-  ":hover": {
-    overscrollBehaviour: "none",
-  },
-});
-
 const Laptop = (props: ILaptop) => {
   return (
-    <CustomSVG
+    <svg
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -167,7 +159,7 @@ const Laptop = (props: ILaptop) => {
           <circle style={{ fill: "#232323" }} cx="300" cy="160.5" r="3" />
         </g>
       </g>
-    </CustomSVG>
+    </svg>
   );
 };
 
