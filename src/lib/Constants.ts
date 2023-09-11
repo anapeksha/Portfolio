@@ -47,7 +47,16 @@ const aboutCardText = [
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 ];
 
-const skills = ["Reactjs", "MUI", "SharePoint Online", "SPFx"];
+const skills = [
+  "Reactjs",
+  "MUI",
+  "Redux",
+  "Nextjs",
+  "Emotion",
+  "SharePoint Online",
+  "SPFx",
+  "Power Automate",
+];
 
 const skillsHeading = "IT TOOK ME TIME TO LEARN THEM. BUT, THEY WERE WORTH IT.";
 
@@ -123,25 +132,36 @@ const footerContactData = [
   { url: "mailto:anapeksha.mukherjee.work@gmail.com", icon: Mail },
 ];
 
+interface ICarouselStep {
+  label: string;
+  description: string;
+  tech: Array<string>;
+  previewUrl: string;
+  githubUrl: string;
+}
+
 const carouselSteps = [
   {
-    label: "abcd",
+    label: "Pages",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "A single page application with localstorage capabilities to save and persist notes on your device.",
+    tech: ["Reactjs", "MUI", "Redux", "Redux Persist"],
     previewUrl: "https://anapeksha.github.io/Pages/",
     githubUrl: "https://github.com/anapeksha/Pages",
   },
   {
-    label: "abcd",
+    label: "Cineflick",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "A movie buff? This app will help you search movies and provide links to available torrent files.",
+    tech: ["Nextjs", "MUI", "TMDb api", "YTS api", "SSR", "jwt auth"],
     previewUrl: "https://cineflick-anapeksha.netlify.app/",
     githubUrl: "https://github.com/anapeksha/Cineflick",
   },
   {
-    label: "abcd",
+    label: "Python Proxy Server",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "A simple forward proxy server built for enabling network hops.",
+    tech: ["Python", "Socket.io"],
     previewUrl: "",
     githubUrl: "https://github.com/anapeksha/python-proxy-server",
   },
@@ -162,6 +182,7 @@ export {
   connectTheme,
   connectFormData,
   carouselSteps,
+  type ICarouselStep,
   drawerWidth,
   emailJSConfig,
   footerContactData,
