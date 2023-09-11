@@ -15,8 +15,17 @@ import {
   Tooltip,
   IconButton,
 } from "@mui/material";
+import type { ICarouselStep } from "../lib/Constants";
+import { Dispatch, SetStateAction } from "react";
 
-const Carousel = (props: any) => {
+interface ICarousel {
+  data: Array<ICarouselStep>;
+  step: number;
+  setStep: Dispatch<SetStateAction<number>>;
+  setPreview: Dispatch<SetStateAction<string>>;
+}
+
+const Carousel = (props: ICarousel) => {
   const theme = useTheme();
   const maxSteps = props.data.length;
 
@@ -31,14 +40,16 @@ const Carousel = (props: any) => {
   return (
     <Card sx={{ maxWidth: 400, border: "solid #490B3D 1px" }} elevation={6}>
       <CardContent>
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="h5" fontWeight="bolder" gutterBottom>
           {props.data[props.step].label}
         </Typography>
-        <Typography variant="body2">
+        <Typography variant="body2" gutterBottom>
           {props.data[props.step].description}
         </Typography>
+        <Typography variant="caption" fontWeight="bold">
+          {props.data[props.step].tech.join(" ● ")}
+        </Typography>
       </CardContent>
-
       <CardActions>
         <Tooltip title="GitHub">
           <IconButton
@@ -47,15 +58,17 @@ const Carousel = (props: any) => {
             <GitHub color="secondary" />
           </IconButton>
         </Tooltip>
-        <Tooltip title="Preview">
-          <IconButton
-            onClick={() => {
-              props.setPreview(props.data[props.step].previewUrl);
-            }}
-          >
-            <Visibility color="secondary" />
-          </IconButton>
-        </Tooltip>
+        {props.data[props.step].previewUrl !== "" ? (
+          <Tooltip title="Preview">
+            <IconButton
+              onClick={() => {
+                props.setPreview(props.data[props.step].previewUrl);
+              }}
+            >
+              <Visibility color="secondary" />
+            </IconButton>
+          </Tooltip>
+        ) : null}
       </CardActions>
       <MobileStepper
         variant="dots"

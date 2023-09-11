@@ -1,17 +1,20 @@
-import { Box, Chip, Grid, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Chip,
+  Grid,
+  Stack,
+  Typography,
+  Card,
+  CardContent,
+} from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
-import { useRef } from "react";
 import AboutAvatar from "../assets/about-avatar.svg";
 import { aboutCardText, skills, skillsHeading } from "../lib/Constants";
-import DraggableCard from "../components/DraggableCard";
 
 const About = () => {
-  const parentRef = useRef<Element>(null);
-
   return (
     <div>
       <Box
-        ref={parentRef}
         sx={{
           display: "flex",
           height: "100vh",
@@ -26,21 +29,19 @@ const About = () => {
             if (index % 2 === 0) {
               return (
                 <>
-                  <Grid item xs={12} sm={6}>
-                    <DraggableCard
-                      key={index}
-                      parent={parentRef}
-                      style={{ backgroundColor: "#e1f8e8" }}
-                    >
-                      <Typography
-                        sx={{
-                          fontFamily: "'Fira Code', monospace",
-                          fontWeight: "700",
-                        }}
-                      >
-                        {value}
-                      </Typography>
-                    </DraggableCard>
+                  <Grid item xs={12} sm={6} key={index}>
+                    <Card style={{ backgroundColor: "#e1f8e8" }}>
+                      <CardContent>
+                        <Typography
+                          sx={{
+                            fontFamily: "'Fira Code', monospace",
+                            fontWeight: "700",
+                          }}
+                        >
+                          {value}
+                        </Typography>
+                      </CardContent>
+                    </Card>
                   </Grid>
                   <Grid item xs={12} sm={6}>
                     <Box></Box>
@@ -54,19 +55,18 @@ const About = () => {
                     <Box></Box>
                   </Grid>
                   <Grid item xs={12} sm={6}>
-                    <DraggableCard
-                      key={index}
-                      style={{ backgroundColor: "#e1f8e8" }}
-                    >
-                      <Typography
-                        sx={{
-                          fontFamily: "'Fira Code', monospace",
-                          fontWeight: "700",
-                        }}
-                      >
-                        {value}
-                      </Typography>
-                    </DraggableCard>
+                    <Card key={index} style={{ backgroundColor: "#e1f8e8" }}>
+                      <CardContent>
+                        <Typography
+                          sx={{
+                            fontFamily: "'Fira Code', monospace",
+                            fontWeight: "700",
+                          }}
+                        >
+                          {value}
+                        </Typography>
+                      </CardContent>
+                    </Card>
                   </Grid>
                 </>
               );

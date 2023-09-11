@@ -1,11 +1,11 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography, Stack, Divider } from "@mui/material";
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import homeAvatar from "../assets/home-avatar.svg";
-import HomeCard from "../components/HomeCard";
 import Footer from "../components/Footer";
 import { homeCardContent, homeTypewriterText } from "../lib/Constants";
+import DraggableCard from "../components/DraggableCard";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -76,8 +76,19 @@ const Home = () => {
         <Grid container spacing={5} paddingBottom={5}>
           {homeCardContent.map((value, index) => {
             return (
-              <Grid item xs={6} md={4} xl={4} key={index}>
-                <HomeCard heading={value.heading} body={value.body} />
+              <Grid item xs={12} md={4} key={index}>
+                <DraggableCard
+                  parent={boxRef}
+                  cardElevation={7}
+                  style={{ border: "2px solid #4b5486" }}
+                >
+                  <Stack spacing={1}>
+                    <Divider flexItem textAlign="left">
+                      <Typography variant="h6">{value.heading}</Typography>
+                    </Divider>
+                    <Typography variant="body1">{value.body}</Typography>
+                  </Stack>
+                </DraggableCard>
               </Grid>
             );
           })}

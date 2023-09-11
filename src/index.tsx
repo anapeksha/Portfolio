@@ -9,7 +9,6 @@ import "@fontsource/roboto/700.css";
 import "@fontsource-variable/fira-code";
 import "@fontsource-variable/karla";
 
-import "animate.css";
 import { BrowserRouter } from "react-router-dom";
 import { GlobalStyles } from "@mui/material";
 
