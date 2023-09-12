@@ -1,10 +1,16 @@
 import { sendForm } from "@emailjs/browser";
 import { ArrowForward, GitHub, LinkedIn, Mail } from "@mui/icons-material";
 import { Box, Button, Stack, TextField, Grid, Chip } from "@mui/material";
-import { FormEvent, useRef } from "react";
+import { FormEvent, useRef, Dispatch, SetStateAction } from "react";
 import { emailJSConfig } from "../lib/Constants";
 
-const Footer = () => {
+interface IFooter {
+  success: boolean;
+  setSuccess: Dispatch<SetStateAction<boolean>>;
+  setOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+const Footer = (props: IFooter) => {
   const formRef = useRef<HTMLFormElement>(null);
   const submitForm = (event: FormEvent) => {
     event.preventDefault();
@@ -15,9 +21,13 @@ const Footer = () => {
       emailJSConfig.contact.PUBLIC_KEY as string
     )
       .then((response) => {
-        return response;
+        props.setSuccess(true);
+        props.setOpen(true);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        props.setSuccess(false);
+        props.setOpen(true);
+      });
   };
   return (
     <Grid

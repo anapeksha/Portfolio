@@ -12,8 +12,6 @@ import {
   Button,
   useTheme,
   CardActions,
-  Tooltip,
-  IconButton,
 } from "@mui/material";
 import type { ICarouselStep } from "../lib/Constants";
 import { Dispatch, SetStateAction } from "react";
@@ -51,23 +49,25 @@ const Carousel = (props: ICarousel) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Tooltip title="GitHub">
-          <IconButton
-            onClick={() => window.open(props.data[props.step].githubUrl)}
-          >
-            <GitHub color="secondary" />
-          </IconButton>
-        </Tooltip>
+        <Button
+          startIcon={<GitHub />}
+          variant="outlined"
+          color="secondary"
+          onClick={() => window.open(props.data[props.step].githubUrl)}
+        >
+          GitHub
+        </Button>
         {props.data[props.step].previewUrl !== "" ? (
-          <Tooltip title="Preview">
-            <IconButton
-              onClick={() => {
-                props.setPreview(props.data[props.step].previewUrl);
-              }}
-            >
-              <Visibility color="secondary" />
-            </IconButton>
-          </Tooltip>
+          <Button
+            startIcon={<Visibility />}
+            variant="outlined"
+            color="secondary"
+            onClick={() => {
+              props.setPreview(props.data[props.step].previewUrl);
+            }}
+          >
+            Preview
+          </Button>
         ) : null}
       </CardActions>
       <MobileStepper
