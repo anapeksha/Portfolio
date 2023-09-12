@@ -93,6 +93,8 @@ const navItems = [
   { name: "Projects", url: "project" },
 ];
 
+const connectHeader = "It starts with a conversation.";
+
 const connectFormData = [
   {
     type: "text",
@@ -181,6 +183,7 @@ export {
   aboutCardText,
   connectTheme,
   connectFormData,
+  connectHeader,
   carouselSteps,
   type ICarouselStep,
   drawerWidth,
