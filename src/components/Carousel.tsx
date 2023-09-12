@@ -12,8 +12,6 @@ import {
   Button,
   useTheme,
   CardActions,
-  Tooltip,
-  IconButton,
 } from "@mui/material";
 import type { ICarouselStep } from "../lib/Constants";
 import { Dispatch, SetStateAction } from "react";
