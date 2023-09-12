@@ -1,15 +1,26 @@
-import { Box, Button, Grid, Typography, Stack, Divider } from "@mui/material";
-import { useEffect, useRef } from "react";
+import {
+  Box,
+  Button,
+  Grid,
+  Typography,
+  Stack,
+  Divider,
+  Snackbar,
+  Alert,
+} from "@mui/material";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import homeAvatar from "../assets/home-avatar.svg";
 import Footer from "../components/Footer";
 import { homeCardContent, homeTypewriterText } from "../lib/Constants";
-import DraggableCard from "../components/DraggableCard";
+import CustomCard from "../components/CustomCard";
 
 const Home = () => {
   const navigate = useNavigate();
   const boxRef = useRef<HTMLDivElement>(null);
+  const [success, setSuccess] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -19,8 +30,24 @@ const Home = () => {
       });
     }, 16000);
   }, []);
+
+  const handleSnackbarClose = () => {
+    setOpen(false);
+    setSuccess(false);
+  };
+
   return (
     <div>
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        open={open}
+        onClose={handleSnackbarClose}
+        autoHideDuration={3000}
+      >
+        <Alert severity={!success ? "error" : "success"}>
+          {!success ? "Something went wrong" : "Submitted successfully"}
+        </Alert>
+      </Snackbar>
       <Box
         display="flex"
         height="100vh"
@@ -77,8 +104,7 @@ const Home = () => {
           {homeCardContent.map((value, index) => {
             return (
               <Grid item xs={12} md={4} key={index}>
-                <DraggableCard
-                  parent={boxRef}
+                <CustomCard
                   cardElevation={7}
                   style={{ border: "2px solid #4b5486" }}
                 >
@@ -88,7 +114,7 @@ const Home = () => {
                     </Divider>
                     <Typography variant="body1">{value.body}</Typography>
                   </Stack>
-                </DraggableCard>
+                </CustomCard>
               </Grid>
             );
           })}
@@ -123,7 +149,7 @@ const Home = () => {
           </Button>
         </Box>
       </Box>
-      <Footer />
+      <Footer success={success} setSuccess={setSuccess} setOpen={setOpen} />
     </div>
   );
 };
