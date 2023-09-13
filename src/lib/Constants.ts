@@ -85,6 +85,10 @@ const homeCardContent = [
     heading: "Attention to Detail",
     body: "I pay close attention to every detail, ensuring that your software is reliable and functions smoothly.",
   },
+  {
+    heading: "Process Automation",
+    body: "Time is money. I can automate complex processes which can save resources from manual labour.",
+  },
 ];
 
 const navItems = [
