@@ -42,14 +42,9 @@ const homeTypewriterText = [
   "shape innovation.",
 ];
 
-const aboutCardText = [
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-];
-
 const skills = [
   "Reactjs",
-  "MUI",
+  "React Native",
   "Redux",
   "Nextjs",
   "Emotion",
@@ -58,7 +53,7 @@ const skills = [
   "Power Automate",
 ];
 
-const skillsHeading = "IT TOOK ME TIME TO LEARN THEM. BUT, THEY WERE WORTH IT.";
+const skillsHeading = "Technologies I work with";
 
 const homeCardContent = [
   {
@@ -148,20 +143,20 @@ interface ICarouselStep {
 
 const carouselSteps = [
   {
-    label: "Pages",
-    description:
-      "A single page application with localstorage capabilities to save and persist notes on your device.",
-    tech: ["Reactjs", "MUI", "Redux", "Redux Persist"],
-    previewUrl: "https://anapeksha.github.io/Pages/",
-    githubUrl: "https://github.com/anapeksha/Pages",
-  },
-  {
     label: "Cineflick",
     description:
       "A movie buff? This app will help you search movies and provide links to available torrent files.",
     tech: ["Nextjs", "MUI", "TMDb api", "YTS api", "SSR", "jwt auth"],
     previewUrl: "https://cineflick-anapeksha.netlify.app/",
     githubUrl: "https://github.com/anapeksha/Cineflick",
+  },
+  {
+    label: "Pages",
+    description:
+      "A single page application with localstorage capabilities to save and persist notes on your device.",
+    tech: ["Reactjs", "MUI", "Redux", "Redux Persist"],
+    previewUrl: "https://anapeksha.github.io/Pages/",
+    githubUrl: "https://github.com/anapeksha/Pages",
   },
   {
     label: "Python Proxy Server",
@@ -184,21 +179,20 @@ const emailJSConfig = {
 const drawerWidth = 240;
 
 export {
-  aboutCardText,
-  connectTheme,
+  aboutTheme,
+  carouselSteps,
   connectFormData,
   connectHeader,
-  carouselSteps,
-  type ICarouselStep,
+  connectTheme,
   drawerWidth,
   emailJSConfig,
   footerContactData,
   homeCardContent,
+  homeTheme,
   homeTypewriterText,
+  navItems,
+  projectTheme,
   skills,
   skillsHeading,
-  navItems,
-  homeTheme,
-  aboutTheme,
-  projectTheme,
+  type ICarouselStep,
 };
